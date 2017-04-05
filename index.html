@@ -1,8 +1,50 @@
+<!DOCTYPE html>
 <html>
-    <head>
-       <title> {{ web }} </title>
-    </head>
-    <body>
-       <h1> Hello </h1>
-    </body>
+	<h1 align="center">Sebelum Anda Mengikuti Kuis berikut ini, Mohon Isi Data Berikut Ini :</h1>
+	<hr width="600" color="black" noshade size="5">
+	<font face ="arial">
+	
+	<h3 align="center"> Sumber data : http://data.jakarta.go.id </h3>
+	<hr width="600" color="black" noshade size="2">
+	
+	<center>
+			<form name="user" method="post">
+			<TABLE>
+				<tr><td width="31%">Nama</td>
+				<td width="7%">:</td>
+				<td width="62%">
+				<input type="text" name="nama" size="9" onFocus="window.status='Silahkan Mengisi Nama Anda';" onBlur="masukkanusia()">
+				</td></tr>
+				
+				<tr><td width="31%">Usia</td>
+				<td width="7%">:</td>
+				<td width="62%">
+				<input type="text" name="usia" size="9" onFocus="window.status='Silahkan Mengisi Usia Anda';" onBlur="masukkanusia()">
+				</td></tr>
+				
+				<tr><td width="31%">Jenis Kelamin</td>
+				<td width="7%">:</td>
+				<td width="62%">
+				<input type="radio" name="JK" value="LK" checked>Laki-laki<br/>  
+				<input type="radio" name="JK" value="PR">Perempuan<br/>  
+				</td></tr>
+				
+				<tr><td width="31%">Pilih Kota:</td>
+				<td width="7%">:</td>
+				<td width="62%">
+				<select id="select" name="select">
+				<option value="jakarta">Jakarta Selatan</option>
+				<option value="bandung">Jakarta Utara</option>
+				<option value="bogor">Jakarta Barat</option>
+				<option value="bogor">Jakarta Pusat</option>
+				<option value="bogor">Kepulauan Seribu</option>
+				</td></tr>
+			</TABLE>
+			<hr width="600" color="black" noshade size="2">
+			<br>
+                  <tr>
+                      <td align="center"><button type="submit" class="btn btn-default">Mulai</button></td>
+                  </tr>
+			</form>
+	</center>
 </html>
