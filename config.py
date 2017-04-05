@@ -1,7 +1,9 @@
-import os
-basedir = os.pathabspath(os.path.dirname(__file__))
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
-SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-WTF_CSRF_ENABLED = True
-SECRET_KEY = 'you-will-never-guess'
+app = Flask(__name__)
+app.debug=True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:82164AjH*@localhost/kuispython'
+
+db = SQLAlchemy(app)
