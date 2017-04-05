@@ -1,0 +1,33 @@
+<!-- extend base layout -->
+{% extends "base.html"%}
+
+{% block content %}
+    <h1> Silahkan Isi Data Berikut Ini :</h1>
+    <form action = "kuis.py" method="post" name="login">
+    	{{ form.hidden_tag() }}
+	<p>
+		Usia:<br>
+		{{ form.name(size=50) }}<br>
+		{% for error in form.name.errors %}
+		 <span style="color: red;"> [{{error}}]</span>
+		{% endfor %} <br>
+	</p>
+	<p>
+		Jenis Kelamin:<br>
+		{{ form.gender() }}<br>
+		{% for error in form.gender.errors %}
+		 <span style="color: red;"> [{{error}}]</span>
+		{% endfor %} <br>
+	</p>
+	<p>
+		Kota/Kabupaten:<br>
+		{{ form.city ()}}<br>
+		{% for error in form.city.errors %}
+		 <span style="color: red;"> [{{error}}]</span>
+		{% endfor %} <br>
+	</p>
+	
+	<p><input type="submit" value="Submit"></p>
+	
+    </form>
+{% endblock %}
